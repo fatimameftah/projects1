@@ -1183,17 +1183,85 @@ void rightshift(int arr[],int size,int k)
 	for(i=0;i<k;i++)
 	{
 		arr[i]=temp[i];
-	}
-	
-
-	
+	}	
 }
 
-	
+int findMissingNumber(int arr[],int size){
+	int missnum,i;
+	for(i=0;i<size-1;i++){
+		if(arr[i+1]-arr[i]!=1){
+		missnum=arr[i+1]-1;	
+		}
+	}
+	return missnum;
+}	
 
+void bubbleSort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
 
+void selectionSort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        int minind = i;
+        for (int j = i + 1; j < size; j++) {
+            if (arr[j] < arr[minind]) {
+                minind = j;
+            }
+        }
+        int temp = arr[i];
+        arr[i] = arr[minind];
+        arr[minind] = temp;
+    }
+}
 
+void insertionSort(int arr[], int size) {
+    for (int i = 1; i < size; i++) {
+        int insrt = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > insrt) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = insrt;
+    }
+}
 
+// Function to swap two elements
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+// Function to partition the array around the pivot
+int partition(int arr[], int low, int high) {
+    int pivot = arr[high]; 
+    int i = low - 1; 
+ for (int j = low; j < high; j++) {
+        if (arr[j] <= pivot) {
+            i++;
+            swap(&arr[i], &arr[j]);
+        }
+    }
+    swap(&arr[i + 1], &arr[high]);
+    return i + 1; 
+}
+
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        int pivotIndex = partition(arr, low, high);
+
+        quickSort(arr, low, pivotIndex - 1);
+        quickSort(arr, pivotIndex + 1, high);
+   }
+}
 
 
 
