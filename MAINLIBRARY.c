@@ -14,7 +14,7 @@ int main()
 	printf("25-catalan number\n26-pascal triangle\n28-kaprekar number\n29-smith number\n30-sum of prime numbers\n");
 	
 	printf("\n\nOPERATIONS ON ARRAYS\n\n31-print array\n32-find maximum\n33-find minimum\n34-calculate sum\n35-calculate average\n36-chek if sorted\n37-reverse array\n\nINTERMEDIATE OPERATIONS\n\n38-count even and odd numbers\n");
-	printf("39-find second largest\n40-find frequency of elements\n41-remove duplicates\n42-binary search\n43-Linear search\n44-left shift array\n45-right shift array\n");
+	printf("39-find second largest\n40-find frequency of elements\n41-remove duplicates\n42-binary search\n43-Linear search\n44-left shift array\n45-right shift array\n46-find missing number\n47-bubble sort\n48-selection sort\n49-insertion sort\n50-quick sort\n");
 	printf("\nchoose the number coresponding to the function that you want to try:\n");
 	scanf("%d",&desire);
 	switch(desire)
@@ -796,6 +796,101 @@ int main()
 		}while(ch == 'y');
 		break;
 											}
+
+		 case 46:
+                            {
+                                int arr[100], size;
+                                printf("Enter array size : ");
+                                scanf("%d", &size);
+                                printf("Enter array elements : ");
+                                for(int i=0;i<size;i++)
+                                {
+                                    scanf("%d", &arr[i]);
+                                }
+                                printf("The missing number is: %d\n", findMissingNumber(arr, size));
+                                break;
+                            }
+
+ case 47:
+                            {
+                                int arr[100],size;
+                                printf("Enter array size: ");
+                                scanf("%d",&size);
+                                printf("Enter array elements: ");
+                                for(int i=0;i<size;i++)
+                                {
+                                    scanf("%d",&arr[i]);
+                                }
+                                bubbleSort(arr,size);
+                                printf("Sorted array: ");
+                                for(int i=0;i<size;i++)
+                                {
+                                    printf("%d ",arr[i]);
+                                }
+                                printf("\n");
+                                break;
+                            }
+
+
+ case 48:
+                            {
+                                int arr[100],size;
+                                printf("Enter array size: ");
+                                scanf("%d",&size);
+                                printf("Enter array elements: ");
+                                for(int i=0;i<size;i++)
+                                {
+                                    scanf("%d",&arr[i]);
+                                }
+                                selectionSort(arr,size);
+                                printf("Sorted array: ");
+                                for(int i=0;i<size;i++)
+                                {
+                                    printf("%d ",arr[i]);
+                                }
+                                printf("\n");
+                                break;
+                            }
+ case 49:
+                            {
+                                int arr[100],size;
+                                printf("Enter array size: ");
+                                scanf("%d",&size);
+                                printf("Enter array elements: ");
+                                for(int i=0;i<size;i++)
+                                {
+                                    scanf("%d",&arr[i]);
+                                }
+                                insertionSort(arr,size);
+                                printf("Sorted array: ");
+                                for(int i=0;i<size;i++)
+                                {
+                                    printf("%d ",arr[i]);
+                                }
+                                printf("\n");
+                                break;
+                            }
+
+		 case 50:
+                            {
+                                int arr[100],size;
+                                printf("Enter array size: ");
+                                scanf("%d",&size);
+                                printf("Enter array elements: ");
+                                for(int i=0;i<size;i++)
+                                {
+                                    scanf("%d",&arr[i]);
+                                }
+                                quickSort(arr,size);
+                                printf("Sorted array: ");
+                                for(int i=0;i<size;i++)
+                                {
+                                    printf("%d ",arr[i]);
+                                }
+                                printf("\n");
+                                break;
+                            }
+		
 	
 default:
 		 {
@@ -806,7 +901,7 @@ default:
 																																									}																																					  	 	 
 		 	 
 	 
-		
+
 	
 																																										  	 	 
 	
