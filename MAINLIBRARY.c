@@ -807,7 +807,7 @@ int main()
                                 {
                                     scanf("%d", &arr[i]);
                                 }
-                                printf("The missing number is: %d\n", findMissingNumber(arr, size));
+                                printf("The missing number is: %d\n",findMissingNumber(arr, size));
                                 break;
                             }
 
